@@ -162,76 +162,11 @@ let num4 = 5;
 
 
 
-const formData = document.getElementById('formData');
-const Name = document.getElementById('userName');
-const Email = document.getElementById('Email');
-const Number = document.getElementById('phone');
-const Dep = document.getElementById('department');
-const Doctors = document.getElementById('doctors');
-const Date = document.getElementById('date');
-const Message = document.getElementById('message');
-
-
-formData.addEventListener("submit", async function(event){
-
-    event.preventDefault();
-
-
-    const setData ={
-
-        Name :  Name.value,
-        Email : Email.value ,
-        Number :  Number.value,
-        Dep :  Dep.value,
-        Doctors : Doctors.value,
-        Date : Date.value,
-        Message : Message.value,
-
-
-
-    };
-
-    try {
-
-        const res = await fetch("https://webhook.site/48cc41d8-579b-40b4-8e10-ae2bd7a1cf00", {
-            method :  "POST",
-
-            headers : {
-             "Content-Type"  : "application/josn"
-
-            },
-
-            body : JSON.stringify(setData)      
-        });
-
-        const data = await res.json();
-
-        if(res.ok){
-            alert(" تم التسجيل بنجاح")
-             console.log(data);
-             
-
-
-        }
-
-         else {
-            alert("حدث خطا"  + data.Message)
-
-         }
-
-
-    }
-
-    catch(error){
-        console.error( ' خطا في الاتصال ',  error )
-        alert('فشل الاتصال')
-
-            
-    }
 
 
 
 
-})
+
+
 
 
