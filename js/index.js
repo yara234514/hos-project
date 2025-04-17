@@ -56,7 +56,7 @@ $(function(){
 
 
 
- const home = document.getElementById('home')
+ const home = document.querySelector('header')
  const nav = document.querySelector(".navbar")
  const info = document.getElementById('info')
 
